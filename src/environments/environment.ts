@@ -4,43 +4,7 @@
 
 export const environment = {
   production: false,
-  themeData: {
-    currentTheme: 'vividAndSharp',
-    themes: {
-      vividAndSharp: {
-        color1: '#D93F87',
-        color2: '#2A1C3B',
-        color3: '#44318D',
-        color4: '#8265A7',
-        color5: '#A4B3B6',
-        majorTextColor: '#FEFDFB',
-        shades: {
-          color2: {
-            toDark: [
-              '#291c3a',
-              '#271a37',
-              '#221730',
-              '#1b1226',
-              '#110b18'
-            ]
-          }
-        }
-      },
-      TEMPLATE: {
-        color1: '',
-        color2: '',
-        color3: '',
-        color4: '',
-        color5: '',
-        majorTextColor: '',
-        shades: {
-          color2: {
-            toDark: []
-          }
-        }
-      }
-    }
-  }
+  resumeUrl: 'https://drive.google.com/open?id=1u_8oDHemUAYZdO99AGEYX8iqRrl3lNGO'
 };
 
 /*
