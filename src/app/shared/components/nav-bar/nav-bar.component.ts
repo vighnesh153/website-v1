@@ -3,18 +3,12 @@ import {
   ElementRef,
   HostListener,
   Input,
-  OnDestroy,
   ViewChild
 } from '@angular/core';
 
-import { Subscription } from 'rxjs';
-
-import { Theme } from '@vighnesh153-shared/models/Theme';
-import { ThemeService } from '@vighnesh153-shared/services/theme.service';
-
+import {environment} from '@vighnesh153-environments/environment';
 import {
-  onClick,
-  onScroll
+  onClick
 } from '@vighnesh153-shared/components/nav-bar/nav-bar.component.util';
 
 @Component({
@@ -22,19 +16,15 @@ import {
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent implements OnDestroy {
+export class NavBarComponent {
   navBarInfo = {
     displayNavBar: true,
     top: '0px',
-    borderBottomGradient: ''
+    resumeUrl: environment.resumeUrl
   };
   hamburgerItemsInfo = {
     isHidden: true
   };
-
-  theme: Theme;
-  themeSubscription: Subscription;
-  previousScrollValue: number;
 
   @Input() containerWidth: number;
 
@@ -45,24 +35,10 @@ export class NavBarComponent implements OnDestroy {
     onClick(event, this);
   }
 
-  @HostListener('document:scroll', ['$event']) scrollEvent(event: Event) {
-    onScroll(event, this);
-  }
-
-  constructor(private themeService: ThemeService) {
-    this.themeSubscription = this.themeService.themeSubject.subscribe(
-      (theme: Theme) => {
-        this.theme = theme;
-      }
-    );
-    this.previousScrollValue = window.pageYOffset;
+  constructor() {
   }
 
   onClickHamburger(): void {
     this.hamburgerItemsInfo.isHidden = !this.hamburgerItemsInfo.isHidden;
-  }
-
-  ngOnDestroy(): void {
-    this.themeSubscription.unsubscribe();
   }
 }

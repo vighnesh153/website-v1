@@ -1,9 +1,16 @@
+@import "src/assets/themes";
+
 nav {
   height: 10vh;
   width: 100%;
   position: fixed;
 
-  transition: top .4s ease-in-out;
+  background-color: $color2;
+  color: $majorTextColor;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -13,8 +20,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   margin: auto;
-
-  border: 1px solid red;
 }
 
 .hamburger {
@@ -23,11 +28,45 @@ nav {
 }
 
 .hamburger-items {
-  width: 30%;
+  width: 50%;
+  max-width: 500px;
   display: flex;
+
+  background-color: $color2;
+
+  font-size: 0.9rem;
 
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
+}
+
+.hamburger-item {
+  cursor: pointer;
+  display: flex;
+
+  align-items: center;
+
+  &:focus, .hamburger-item-active {
+    outline-color: $color1;
+    color: $color1;
+  }
+
+  &:hover {
+    color: $color1;
+  }
+}
+
+.hamburger-item-resume {
+  padding: 5px 15px;
+  border: 1px solid $color1;
+  border-radius: 4px;
+
+  font-size: 0.95rem;
+  color: $color1;
+
+  &:hover {
+    background-color: rgba($color1, 0.1);
+  }
 }
 
 @media screen and (max-width: 1000px) {
