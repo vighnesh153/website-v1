@@ -1,0 +1,12 @@
+.hamburger {
+  height: 15px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-line {
+  width: 30px;
+  height: 3px;
+}

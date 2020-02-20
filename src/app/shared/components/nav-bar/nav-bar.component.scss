@@ -1,0 +1,66 @@
+nav {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+
+  transition: top .4s ease-in-out;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+
+  border: 1px solid red;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger-items {
+  width: 30%;
+  display: flex;
+
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger-items {
+    height: 90vh;
+    width: 50%;
+    position: fixed;
+    right: 0;
+    top: 10vh;
+
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .hamburger-items-hidden {
+    //display: none;    // transition doesn't work with this
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hamburger-items {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hamburger-items {
+    width: 100%;
+  }
+}

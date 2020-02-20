@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-vighnesh153-canvas-client';
+  containerWidth = 90;
 }
