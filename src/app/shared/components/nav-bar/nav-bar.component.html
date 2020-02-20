@@ -1,38 +1,36 @@
-<nav
-  [ngStyle]="{
-    top: navBarInfo.top,
-    boxShadow: navBarInfo.borderBottomGradient,
-    backgroundColor: theme.color2,
-    color: theme.majorTextColor
-  }"
-  #navBar
->
-  <div
-    [ngStyle]="{
-      width: '' + containerWidth + '%'
-    }"
-    class="container"
-  >
+<nav [ngStyle]="{top: navBarInfo.top}" #navBar>
+  <div [ngStyle]="{width: '' + containerWidth + '%'}" class="container">
     <div class="logo">
       LOGO
     </div>
-    <app-hamburger
-      class="hamburger"
-      (click)="onClickHamburger()"
+    <app-hamburger class="hamburger" (click)="onClickHamburger()"
     ></app-hamburger>
-    <ul
-      [ngStyle]="{
-        backgroundColor: theme.color2
-      }"
+    <div
       [ngClass]="{
         'hamburger-items-hidden': hamburgerItemsInfo.isHidden
       }"
       class="hamburger-items"
       #hamburgerItems
     >
-      <li class="hamburger-item">About</li>
-      <li class="hamburger-item">Experience</li>
-      <li class="hamburger-item">Projects</li>
-    </ul>
+      <div class="hamburger-item"
+           routerLink="/"
+           routerLinkActive="hamburger-item-active"
+      >About</div>
+      <div class="hamburger-item"
+           routerLink="/experience"
+           routerLinkActive="hamburger-item-active"
+      >Experience</div>
+      <div class="hamburger-item"
+           routerLink="/projects"
+           routerLinkActive="hamburger-item-active"
+      >Projects</div>
+      <div class="hamburger-item"
+           routerLink="/contact"
+           routerLinkActive="hamburger-item-active"
+      >Contact</div>
+      <a class="hamburger-item hamburger-item-resume"
+           [href]="navBarInfo.resumeUrl" target="_blank"
+      >Resume</a>
+    </div>
   </div>
 </nav>
