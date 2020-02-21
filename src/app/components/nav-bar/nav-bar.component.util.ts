@@ -1,6 +1,6 @@
 import {
   NavBarComponent
-} from '@vighnesh153-shared/components/nav-bar/nav-bar.component';
+} from './nav-bar.component';
 
 export const onClick = (event: Event, component: NavBarComponent): void => {
   if (component.hamburgerItemsInfo.isHidden) {

@@ -1,4 +1,4 @@
-@import "src/assets/themes";
+@import "../../../assets/themes";
 
 nav {
   height: 10vh;
@@ -45,15 +45,13 @@ a {
   display: flex;
 
   align-items: center;
+}
 
-  &:focus, .hamburger-item-active {
-    outline-color: $color1;
-    color: $color1;
-  }
-
-  &:hover {
-    color: $color1;
-  }
+.hamburger-item:focus,
+.hamburger-item:hover,
+.hamburger-item-active {
+  outline-color: $color1;
+  color: $color1;
 }
 
 .hamburger-item-resume {

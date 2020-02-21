@@ -9,7 +9,7 @@ import {
 import {environment} from '@vighnesh153-environments/environment';
 import {
   onClick
-} from '@vighnesh153-shared/components/nav-bar/nav-bar.component.util';
+} from './nav-bar.component.util';
 
 @Component({
   selector: 'app-nav-bar',

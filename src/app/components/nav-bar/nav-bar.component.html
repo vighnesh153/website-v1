@@ -15,18 +15,22 @@
       <div class="hamburger-item"
            routerLink="/"
            routerLinkActive="hamburger-item-active"
+           [routerLinkActiveOptions]="{ exact: true }"
       >About</div>
       <div class="hamburger-item"
            routerLink="/experience"
            routerLinkActive="hamburger-item-active"
+           [routerLinkActiveOptions]="{ exact: true }"
       >Experience</div>
       <div class="hamburger-item"
            routerLink="/projects"
            routerLinkActive="hamburger-item-active"
+           [routerLinkActiveOptions]="{ exact: true }"
       >Projects</div>
       <div class="hamburger-item"
            routerLink="/contact"
            routerLinkActive="hamburger-item-active"
+           [routerLinkActiveOptions]="{ exact: true }"
       >Contact</div>
       <a class="hamburger-item hamburger-item-resume"
            [href]="navBarInfo.resumeUrl" target="_blank"
