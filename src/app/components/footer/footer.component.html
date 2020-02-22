@@ -1,0 +1,10 @@
+<div class="footer column-flex">
+  <a [href]="repoUrl" target="_blank">
+    <div class="content column-flex">
+      <p class="designed-by">Designed & Built by Vighnesh Raut</p>
+      <p>Last updated on:
+        <span>{{ (lastUpdatedOn | date:'longDate') || '- - -' }}</span>
+      </p>
+    </div>
+  </a>
+</div>

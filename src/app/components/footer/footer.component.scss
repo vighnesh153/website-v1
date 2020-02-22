@@ -1,0 +1,32 @@
+@import "src/assets/themes";
+
+a {
+  text-decoration: none;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  height: 12vh;
+
+  background-color: $color3;
+}
+
+.content {
+  color: $color5;
+  cursor: pointer;
+
+  &:hover {
+    color: $color1;
+  }
+}
+
+.designed-by {
+
+  font-size: 1.2em;
+}
