@@ -1,6 +1,6 @@
 <nav [ngStyle]="{top: navBarInfo.top}" #navBar>
   <div [ngStyle]="{width: '' + containerWidth + '%'}" class="container">
-    <div class="logo">
+    <div class="logo" routerLink="/">
       LOGO
     </div>
     <app-hamburger class="hamburger" (click)="onClickHamburger()"

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-vighnesh153-canvas-client';
+  title = 'Vighnesh Raut | My personal playground';
   containerWidth = 90;
 }

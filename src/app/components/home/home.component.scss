@@ -1,0 +1,96 @@
+@import "src/assets/themes";
+
+.container {
+  width: 50%;
+  max-width: 500px;
+  margin-top: 2%;
+  margin-left: 15%;
+
+  hyphens: none;
+}
+
+.intro-start {
+  font-size: 1.1rem;
+  font-weight: bolder;
+
+  color: lighten($color3, 30);
+}
+
+.major {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.my-name {
+  color: $color3;
+}
+
+.short-desc {
+  color: lighten($color3, 30);
+}
+
+.long-desc {
+  margin-top: 5%;
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: darken($color5, 20);
+}
+
+.get-in-touch {
+  margin-top: 10%;
+  width: fit-content;
+
+  padding: 5px 15px;
+  border: 1px solid $color1;
+  border-radius: 4px;
+
+  font-size: 1.1rem;
+  color: $color1;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($color1, 0.3);
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .container {
+    margin-top: 4%;
+  }
+
+  .major {
+    font-size: 2.5rem;
+  }
+
+  .long-desc, .intro-start {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    margin-top: 6%;
+  }
+
+  .major {
+    font-size: 2.2rem;
+  }
+
+  .long-desc {
+    font-size: 2.1rem;
+  }
+
+  .long-desc, .intro-start {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .container {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 8%;
+  }
+}
