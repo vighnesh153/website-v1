@@ -1,6 +1,10 @@
 <nav [ngStyle]="{top: navBarInfo.top}" #navBar>
   <div [ngStyle]="{width: '' + containerWidth + '%'}" class="container">
-    <div class="logo" routerLink="/">
+    <div
+      class="logo"
+      routerLink="/"
+      (click)="closeHamburgerMenu()"
+    >
       LOGO
     </div>
     <app-hamburger class="hamburger" (click)="onClickHamburger()"
@@ -15,16 +19,19 @@
       <div class="hamburger-item"
            routerLink="/experience"
            routerLinkActive="hamburger-item-active"
+           (click)="closeHamburgerMenu()"
            [routerLinkActiveOptions]="{ exact: true }"
       >Experience</div>
       <div class="hamburger-item"
            routerLink="/projects"
            routerLinkActive="hamburger-item-active"
+           (click)="closeHamburgerMenu()"
            [routerLinkActiveOptions]="{ exact: true }"
       >Projects</div>
       <div class="hamburger-item"
            routerLink="/connect"
            routerLinkActive="hamburger-item-active"
+           (click)="closeHamburgerMenu()"
            [routerLinkActiveOptions]="{ exact: true }"
       >Connect</div>
       <a class="hamburger-item hamburger-item-resume"

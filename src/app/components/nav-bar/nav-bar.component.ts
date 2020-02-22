@@ -41,4 +41,9 @@ export class NavBarComponent {
   onClickHamburger(): void {
     this.hamburgerItemsInfo.isHidden = !this.hamburgerItemsInfo.isHidden;
   }
+
+  // Needed for smaller devices
+  closeHamburgerMenu() {
+    this.hamburgerItemsInfo.isHidden = true;
+  }
 }
