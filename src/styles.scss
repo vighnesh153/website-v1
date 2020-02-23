@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import "assets/themes";
 
 * {
   margin: 0;
@@ -14,4 +15,10 @@
 
 body {
   font-size: 10px;
+  background-color: $color2;
+}
+
+::selection {
+  color: $color1;
+  background-color: rgba($color5, 0.2);
 }

@@ -22,6 +22,22 @@ a {
   margin: auto;
 }
 
+.logo {
+  width: 40px;
+  height: 40px;
+
+  color: $color1;
+  cursor: pointer;
+  fill: none;
+
+  &:hover {
+    fill: rgba($color1, 0.2);
+  }
+  &:focus {
+    outline-color: $color1;
+  }
+}
+
 .hamburger {
   cursor: pointer;
   display: none;

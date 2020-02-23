@@ -22,7 +22,7 @@
   font-size: 3rem;
   font-weight: bolder;
 
-  color: $color3;
+  color: $majorTextColor;
 }
 
 .desc {
@@ -30,7 +30,7 @@
   font-size: 1rem;
   font-weight: bold;
 
-  color: darken($color5, 20);
+  color: $color5;
 }
 
 .email {
@@ -38,10 +38,11 @@
   height: 50px;
   position: relative;
   margin: 5% auto auto;
+  overflow: hidden;
 
   @include flex-center();
 
-  border: 1px solid $color3;
+  border: 1px solid $color1;
   border-radius: 5px;
 
   font-size: 1rem;
@@ -87,7 +88,7 @@
   @include flex-center();
   justify-content: space-around;
 
-  color: $color3;
+  color: $majorTextColor;
   cursor: pointer;
 
   .icon {
