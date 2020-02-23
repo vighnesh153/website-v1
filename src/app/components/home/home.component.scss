@@ -13,7 +13,7 @@
   font-size: 1.1rem;
   font-weight: bolder;
 
-  color: lighten($color3, 30);
+  color: $color1;
 }
 
 .major {
@@ -22,11 +22,11 @@
 }
 
 .my-name {
-  color: $color3;
+  color: $majorTextColor;
 }
 
 .short-desc {
-  color: lighten($color3, 30);
+  color: rgba(lighten($color5, 10), 0.6);
 }
 
 .long-desc {
@@ -41,6 +41,8 @@
   margin-top: 10%;
   width: fit-content;
 
+  background-color: transparent;
+
   padding: 5px 15px;
   border: 1px solid $color1;
   border-radius: 4px;
@@ -49,9 +51,10 @@
   color: $color1;
 
   cursor: pointer;
+  transition: 0.1s ease-in-out;
 
   &:hover {
-    background-color: rgba($color1, 0.3);
+    background-color: rgba($color1, 0.1);
   }
 }
 

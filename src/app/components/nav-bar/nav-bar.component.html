@@ -1,11 +1,7 @@
 <nav [ngStyle]="{top: navBarInfo.top}" #navBar>
   <div [ngStyle]="{width: '' + containerWidth + '%'}" class="container">
-    <div
-      class="logo"
-      routerLink="/"
-      (click)="closeHamburgerMenu()"
-    >
-      LOGO
+    <div class="logo" routerLink="/" (click)="closeHamburgerMenu()">
+      <app-icons type="LOGO"></app-icons>
     </div>
     <app-hamburger class="hamburger" (click)="onClickHamburger()"
     ></app-hamburger>
