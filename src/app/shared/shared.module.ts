@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HamburgerComponent } from './components/hamburger/hamburger.component';
 import { RouterModule } from '@angular/router';
 
-
+import { CommonModule } from '@angular/common';
+import { HamburgerComponent } from './components/hamburger/hamburger.component';
+import { IconsComponent } from './components/icons/icons.component';
 
 @NgModule({
   declarations: [
-    HamburgerComponent
+    HamburgerComponent,
+    IconsComponent
   ],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports: [
-    HamburgerComponent
+    HamburgerComponent,
+    IconsComponent
   ]
 })
 export class SharedModule { }

@@ -1,1 +1,23 @@
-<p>connect works!</p>
+<div class="container">
+  <p class="heading">Get In Touch</p>
+  <p class="desc">
+    My inbox is always open, whether for a
+    potential project or just to say hi. I will try my best to
+    answer your email.
+  </p>
+  <div class="email">
+    <div class="email-text">
+      {{ email }}
+    </div>
+    <div class="click-to-copy" (click)="copy()">
+      <div>Click to copy</div>
+      <app-icons class="copy-icon" [type]="'COPY'"></app-icons>
+    </div>
+  </div>
+  <div class="social">
+    <app-icons (click)="open(linkedInUrl)"
+               class="icon" [type]="'LINKEDIN'"></app-icons>
+    <app-icons (click)="open(githubInUrl)"
+               class="icon" [type]="'GITHUB'"></app-icons>
+  </div>
+</div>

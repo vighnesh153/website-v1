@@ -8,6 +8,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 import { SharedModule } from './shared/shared.module';
+import { ClipboardModule } from 'ngx-clipboard';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -16,6 +17,7 @@ import { ConnectComponent } from './components/connect/connect.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { ToastMessagesComponent } from './components/toast-messages/toast-messages.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,16 @@ import { HomeComponent } from './components/home/home.component';
     ExperienceComponent,
     ConnectComponent,
     NotFoundComponent,
-    FooterComponent
+    FooterComponent,
+    ToastMessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ClipboardModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent]

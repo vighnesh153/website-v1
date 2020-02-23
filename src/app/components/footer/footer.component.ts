@@ -16,7 +16,7 @@ export class FooterComponent implements OnInit {
   repoUrl: string;
 
   constructor(private http: HttpClient) {
-    http.get(environment.github.repoInfoUrl)
+    http.get(environment.personal.github.currentRepoInfoUrl)
       .pipe(take(1))
       .subscribe((data: ProjectRepoInfo) => {
         this.lastUpdatedOn = new Date(data.commit.commit.author.date);
