@@ -4,9 +4,15 @@
 
 export const environment = {
   production: false,
-  resumeUrl: 'https://drive.google.com/open?id=1u_8oDHemUAYZdO99AGEYX8iqRrl3lNGO',
-  github: {
-    repoInfoUrl: ''
+  toastDurationInSeconds: 3,
+  personal: {
+    email: 'vighnesh.raut13@gmail.com',
+    resumeUrl: 'https://drive.google.com/open?id=1u_8oDHemUAYZdO99AGEYX8iqRrl3lNGO',
+    linkedIn: 'https://www.linkedin.com/in/vighnesh153',
+    github: {
+      currentRepoInfoUrl: '',
+      profile: 'https://github.com/vighnesh153'
+    }
   }
 };
 

@@ -20,7 +20,7 @@ export class NavBarComponent {
   navBarInfo = {
     displayNavBar: true,
     top: '0px',
-    resumeUrl: environment.resumeUrl
+    resumeUrl: environment.personal.resumeUrl
   };
   hamburgerItemsInfo = {
     isHidden: true
@@ -40,5 +40,10 @@ export class NavBarComponent {
 
   onClickHamburger(): void {
     this.hamburgerItemsInfo.isHidden = !this.hamburgerItemsInfo.isHidden;
+  }
+
+  // Needed for smaller devices
+  closeHamburgerMenu() {
+    this.hamburgerItemsInfo.isHidden = true;
   }
 }

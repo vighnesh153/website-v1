@@ -4,8 +4,6 @@ header {
 }
 
 .main {
-  border: 1px solid red;
-
   min-height: 78vh;
   // 10vh nav-bar, 12vh footer. We add min-height so that the footer
   // sticks to the bottom even if the content on the main component

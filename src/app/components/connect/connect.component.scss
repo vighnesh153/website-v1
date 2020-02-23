@@ -1,0 +1,142 @@
+@import "src/assets/themes";
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 50%;
+  max-width: 500px;
+  padding-top: 3%;
+  margin: auto;
+
+  hyphens: none;
+}
+
+.heading {
+  width: fit-content;
+  margin: auto;
+
+  font-size: 3rem;
+  font-weight: bolder;
+
+  color: $color3;
+}
+
+.desc {
+  margin-top: 5%;
+  font-size: 1rem;
+  font-weight: bold;
+
+  color: darken($color5, 20);
+}
+
+.email {
+  width: 50%;
+  height: 50px;
+  position: relative;
+  margin: 5% auto auto;
+
+  @include flex-center();
+
+  border: 1px solid $color3;
+  border-radius: 5px;
+
+  font-size: 1rem;
+  color: $color1;
+
+  .email-text {
+    height: 100%;
+    width: 100%;
+    padding: 3%;
+
+    @include flex-center();
+  }
+
+  .click-to-copy {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+
+    @include flex-center();
+    justify-content: space-around;
+
+    color: $color3;
+    cursor: pointer;
+  }
+
+  &:hover .click-to-copy {
+    visibility: visible;
+
+    background-color: rgba(lighten($color3, 10), 0.9);
+    color: lighten($color1, 10);
+  }
+
+  .copy-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.social {
+  width: 200px;
+  margin: 30px auto auto;
+  @include flex-center();
+  justify-content: space-around;
+
+  color: $color3;
+  cursor: pointer;
+
+  .icon {
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      color: $color1;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 70%;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .email {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .email {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .email {
+    width: 90%;
+  }
+}
