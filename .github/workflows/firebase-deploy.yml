@@ -1,7 +1,7 @@
-name: CI
+name: Deploying to Firebase
 
 on:
-  pull_request:
+  push:
     branches:
       - master
 
@@ -16,7 +16,8 @@ jobs:
       with:
         node-version: '10.x'
     - run: npm install
-    - run: npm run build:prod
+    - run: npm i -g @angular/cli
+    - run: ng build --prod
     - uses: w9jds/firebase-action@master
       with:
         args: deploy --only hosting
