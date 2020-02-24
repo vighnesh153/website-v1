@@ -7,6 +7,14 @@ nav {
 
   background-color: $color2;
   color: $majorTextColor;
+
+  z-index: 1;
+  // Given because we are using a fixed element. If a relative
+  // element like copy-email in 'connect' occurs under this elem,
+  // this elem will be placed lower in stack order in the display.
+  // (To understand more about what I mean, comment this and
+  // turn on mobile display. Open the hamburger menu and
+  // go to the connect component and scroll the element to under nav-bar)
 }
 
 a {
@@ -98,6 +106,14 @@ a {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+
+    z-index: 1;
+    // Given because we are using a fixed element. If a relative
+    // element like copy-email in 'connect' occurs under this elem,
+    // this elem will be placed lower in stack order in the display.
+    // (To understand more about what I mean, comment this and
+    // turn on mobile display. Open the hamburger menu and
+    // go to the connect component)
   }
 
   .hamburger-items-hidden {
