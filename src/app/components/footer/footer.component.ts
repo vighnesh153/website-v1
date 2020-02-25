@@ -16,12 +16,18 @@ export class FooterComponent implements OnInit {
   repoUrl: string;
 
   constructor(private http: HttpClient) {
-    http.get(environment.personal.github.currentRepoInfoUrl)
-      .pipe(take(1))
-      .subscribe((data: ProjectRepoInfo) => {
-        this.lastUpdatedOn = new Date(data.commit.commit.author.date);
-        this.repoUrl = data._links.html;
-      });
+    this.getProjectRepoInfo();
+  }
+
+  getProjectRepoInfo() {
+    if (environment.production) {
+      this.http.get(environment.personal.github.currentRepoInfoUrl)
+        .pipe(take(1))
+        .subscribe((data: ProjectRepoInfo) => {
+          this.lastUpdatedOn = new Date(data.commit.commit.author.date);
+          this.repoUrl = data._links.html;
+        });
+    }
   }
 
   ngOnInit(): void {
