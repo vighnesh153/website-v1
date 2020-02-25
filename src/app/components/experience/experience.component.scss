@@ -1,0 +1,79 @@
+@import "src/assets/themes";
+
+li {
+  list-style: square;
+}
+
+.container {
+  width: 70%;
+  max-width: 800px;
+  margin: 50px auto 100px;
+  padding-right: 100px;
+
+  border-right: 1px solid $majorTextColor;
+
+  hyphens: none;
+}
+
+.job {
+  margin-bottom: 50px;
+}
+
+.company {
+  font-size: 1.6rem;
+  color: $color1;
+}
+
+.role-and-duration-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .role {
+    font-size: 1.1rem;
+    color: $majorTextColor;
+  }
+
+  .duration {
+    font-size: 0.8rem;
+    color: darken($majorTextColor, 15);
+  }
+}
+
+.summary {
+  font-size: 0.9rem;
+  color: $color1;
+}
+
+.task-item {
+  font-size: 0.9rem;
+  color: $majorTextColor;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    padding-right: 0;
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .role-and-duration-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 80%;
+  }
+
+  .company {
+    font-size: 1.3rem;
+  }
+
+  .role,
+  .task-item {
+    font-size: 0.8rem;
+  }
+}
