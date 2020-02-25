@@ -51,6 +51,7 @@
   .email-text {
     height: 100%;
     width: 100%;
+    position: absolute;
     padding: 3%;
 
     @include flex-center();
@@ -65,15 +66,13 @@
     @include flex-center();
     justify-content: space-around;
 
-    color: $color3;
+    background-color: rgba(lighten($color3, 10), 0.9);
+    color: lighten($color1, 10);
     cursor: pointer;
   }
 
   &:hover .click-to-copy {
     visibility: visible;
-
-    background-color: rgba(lighten($color3, 10), 0.9);
-    color: lighten($color1, 10);
   }
 
   .copy-icon {

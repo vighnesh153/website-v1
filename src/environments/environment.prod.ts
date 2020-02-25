@@ -1,6 +1,7 @@
 export const environment = {
   production: true,
   toastDurationInSeconds: 3,
+  corsAnywherePrefix: '',
   personal: {
     email: 'vighnesh.raut13@gmail.com',
     resumeUrl: 'https://drive.google.com/open?id=1u_8oDHemUAYZdO99AGEYX8iqRrl3lNGO',
@@ -8,6 +9,8 @@ export const environment = {
     github: {
       currentRepoInfoUrl: 'https://api.github.com/repos/vighnesh153-canvas/angular-client/branches/master',
       profile: 'https://github.com/vighnesh153'
-    }
+    },
+    pastExperienceFetch: 'https://firebasestorage.googleapis.com/v0/b/vighnesh153-canvas.appspot.com/o/CMS%2FExperience.json?alt=media&to' +
+      'ken=e2fe0e01-1bd5-44e1-a285-13a93995b85e'
   }
 };
