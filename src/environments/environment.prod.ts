@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   toastDurationInSeconds: 3,
-  corsAnywherePrefix: '',
+  corsAnywherePrefix: 'https://cors-anywhere.herokuapp.com/',
   personal: {
     email: 'vighnesh.raut13@gmail.com',
     resumeUrl: 'https://drive.google.com/open?id=1u_8oDHemUAYZdO99AGEYX8iqRrl3lNGO',
