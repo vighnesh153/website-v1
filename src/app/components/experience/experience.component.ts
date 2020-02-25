@@ -23,7 +23,8 @@ export class ExperienceComponent implements OnInit {
 
   fetchWorkExperience() {
     if (environment.production) {
-      const fetchUrl = environment.personal.pastExperienceFetch;
+      const fetchUrl = environment.corsAnywherePrefix +
+        environment.personal.pastExperienceFetch;
 
       this.http.get(fetchUrl)
         .pipe(take(1))
