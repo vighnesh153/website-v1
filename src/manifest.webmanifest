@@ -2,8 +2,8 @@
   "name": "Vighnesh Raut",
   "short_name": "Vighnesh Raut",
   "theme_color": "#1976d2",
-  "background_color": "#fafafa",
-  "display": "standalone",
+  "background_color": "#0A192F",
+  "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
   "icons": [
