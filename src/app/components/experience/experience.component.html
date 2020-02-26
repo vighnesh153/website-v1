@@ -1,15 +1,24 @@
 <div class="container">
-  <div class="job" *ngFor="let job of workExperience.jobs">
-    <div class="company">{{ job.company }}</div>
-    <div class="role-and-duration-container">
-      <div class="role">{{ job.role }}</div>
-      <div class="duration">{{ job.duration }}</div>
-    </div>
-    <div class="summary">{{ job.summary }}</div>
-    <ul class="tasks">
-      <li class="task-item" *ngFor="let task of job.tasks">
-        {{ task }}
-      </li>
-    </ul>
+  <div class="loader" *ngIf="isLoading">
+    <app-loader></app-loader>
   </div>
+
+  <div class="experience-container">
+    <ng-container *ngIf="resultFound">
+      <div class="job" *ngFor="let job of workExperience.jobs">
+        <div class="company">{{ job.company }}</div>
+        <div class="role-and-duration-container">
+          <div class="role">{{ job.role }}</div>
+          <div class="duration">{{ job.duration }}</div>
+        </div>
+        <div class="summary">{{ job.summary }}</div>
+        <ul class="tasks">
+          <li class="task-item" *ngFor="let task of job.tasks">
+            {{ task }}
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+  </div>
+
 </div>

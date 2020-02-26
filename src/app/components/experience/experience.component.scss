@@ -4,7 +4,11 @@ li {
   list-style: square;
 }
 
-.container {
+.loader {
+  padding-top: 100px;
+}
+
+.experience-container {
   width: 70%;
   max-width: 800px;
   margin: 50px auto 100px;
@@ -51,7 +55,7 @@ li {
 }
 
 @media screen and (max-width: 800px) {
-  .container {
+  .experience-container {
     padding-right: 0;
     border-right: none;
   }
@@ -64,7 +68,7 @@ li {
 }
 
 @media screen and (max-width: 500px) {
-  .container {
+  .experience-container {
     width: 80%;
   }
 
