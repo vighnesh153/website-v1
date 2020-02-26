@@ -3,6 +3,10 @@
     <app-loader></app-loader>
   </div>
 
+  <div class="error" *ngIf="!isLoading && !resultFound">
+    <p>Some error occurred! Please try again later..</p>
+  </div>
+
   <div class="experience-container">
     <ng-container *ngIf="resultFound">
       <div class="job" *ngFor="let job of workExperience.jobs">
