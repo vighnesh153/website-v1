@@ -4,11 +4,13 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { HamburgerComponent } from './components/hamburger/hamburger.component';
 import { IconsComponent } from './components/icons/icons.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
     HamburgerComponent,
-    IconsComponent
+    IconsComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { IconsComponent } from './components/icons/icons.component';
   ],
   exports: [
     HamburgerComponent,
-    IconsComponent
+    IconsComponent,
+    LoaderComponent
   ]
 })
 export class SharedModule { }

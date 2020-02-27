@@ -16,6 +16,8 @@ import { WorkExperience } from '@vighnesh153-shared/models/Work/WorkExperience';
 })
 export class ExperienceComponent implements OnInit {
   workExperience: WorkExperience = { jobs: [] };
+  isLoading = true;
+  resultFound = false;
 
   constructor(private http: HttpClient) {
     this.fetchWorkExperience();
@@ -28,14 +30,25 @@ export class ExperienceComponent implements OnInit {
 
       this.http.get(fetchUrl)
         .pipe(take(1))
-        .subscribe((data: WorkExperience) => {
-          this.workExperience = data;
+        .subscribe({
+          next: (data: WorkExperience) => {
+            this.workExperience = data;
+            this.resultFound = true;
+          },
+          complete: () => {
+            this.isLoading = false;
+          }
         });
 
     } else {
-      import('./development-experience').then(module => {
-        this.workExperience = module.developmentWorkExperience;
-      });
+      import('./development-experience')
+        .then(module => {
+          this.workExperience = module.developmentWorkExperience;
+          this.resultFound = true;
+        })
+        .finally(() => {
+          this.isLoading = false;
+        });
     }
   }
 
