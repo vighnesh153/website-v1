@@ -2,6 +2,8 @@
 
 My canvas' client in angular(in development phase).
 
+![Deploying to Firebase](https://github.com/vighnesh153-canvas/angular-client/workflows/Deploying%20to%20Firebase/badge.svg)
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
