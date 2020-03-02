@@ -15,7 +15,14 @@ export const environment = {
       profile: 'https://github.com/vighnesh153'
     },
     pastExperienceFetch: 'https://firebasestorage.googleapis.com/v0/b/vighnesh153-canvas.appspot.com/o/CMS%2FExperience.json?alt=media&to' +
-      'ken=e2fe0e01-1bd5-44e1-a285-13a93995b85e'
+      'ken=e2fe0e01-1bd5-44e1-a285-13a93995b85e',
+    projects: [
+      {
+        title: 'Fractals',
+        description: 'Fractals are shapes that have fractional dimensions',
+        link: 'https://vighnesh153-canvas.github.io/fractals/home'
+      }
+    ]
   }
 };
 
