@@ -1,0 +1,17 @@
+<div class="container">
+  <ul class="projects-list">
+    <li class="projects-list-item" *ngFor="let project of projects">
+      <div class="title">
+        <p>{{ project.title }}</p>
+      </div>
+      <div class="about">
+        <p class="description">
+          {{ project.description }}
+        </p>
+        <a [href]="project.link"
+          class="visit" target="_blank" rel="nofollow">Visit
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
