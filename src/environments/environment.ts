@@ -20,7 +20,12 @@ export const environment = {
       {
         title: 'Fractals',
         description: 'Fractals are shapes that have fractional dimensions',
-        link: 'https://vighnesh153-canvas.github.io/fractals/home'
+        link: 'https://vighnesh153-canvas.github.io/fractals'
+      },
+      {
+        title: 'Simulations',
+        description: 'Simulations are approximate imitations of systems or processes',
+        link: 'https://vighnesh153-canvas.github.io/simulations'
       }
     ]
   }
