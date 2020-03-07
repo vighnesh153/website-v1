@@ -23,6 +23,11 @@ export const environment = {
         link: 'https://vighnesh153-canvas.github.io/fractals'
       },
       {
+        title: 'Games',
+        description: 'A collection of arcade games that I built in my free time',
+        link: 'https://vighnesh153-canvas.github.io/games'
+      },
+      {
         title: 'Simulations',
         description: 'Simulations are approximate imitations of systems or processes',
         link: 'https://vighnesh153-canvas.github.io/simulations'
