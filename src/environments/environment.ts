@@ -23,6 +23,12 @@ export const environment = {
         link: 'https://vighnesh153-canvas.github.io/fractals'
       },
       {
+        title: 'Algorithms Visualizer',
+        description: 'I attempt to visualize some of the algorithms that, may or may not be the most efficient ones, ' +
+          'in terms of time and/or space complexity, but are important and fun to understand how they work.',
+        link: 'https://vighnesh153-canvas.github.io/algorithms-visualizer'
+      },
+      {
         title: 'Games',
         description: 'A collection of arcade games that I built in my free time',
         link: 'https://vighnesh153-canvas.github.io/games'
