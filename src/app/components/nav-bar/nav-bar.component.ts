@@ -22,7 +22,21 @@ export class NavBarComponent {
   navBarInfo = {
     displayNavBar: true,
     top: '0px',
-    resumeUrl: environment.personal.resumeUrl
+    resumeUrl: environment.personal.resumeUrl,
+    links: [
+      {
+        title: 'Experience',
+        routerLink: '/experience'
+      },
+      {
+        title: 'Projects',
+        routerLink: '/projects'
+      },
+      {
+        title: 'Connect',
+        routerLink: '/connect'
+      },
+    ]
   };
   hamburgerItemsInfo = {
     isHidden: true

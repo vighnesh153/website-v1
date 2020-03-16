@@ -12,24 +12,14 @@
       class="hamburger-items"
       #hamburgerItems
     >
-      <div class="hamburger-item"
-           routerLink="/experience"
+      <div *ngFor="let link of navBarInfo.links"
+           class="hamburger-item"
+           [routerLink]="link.routerLink"
            routerLinkActive="hamburger-item-active"
            (click)="closeHamburgerMenu()"
            [routerLinkActiveOptions]="{ exact: true }"
-      >Experience</div>
-      <div class="hamburger-item"
-           routerLink="/projects"
-           routerLinkActive="hamburger-item-active"
-           (click)="closeHamburgerMenu()"
-           [routerLinkActiveOptions]="{ exact: true }"
-      >Projects</div>
-      <div class="hamburger-item"
-           routerLink="/connect"
-           routerLinkActive="hamburger-item-active"
-           (click)="closeHamburgerMenu()"
-           [routerLinkActiveOptions]="{ exact: true }"
-      >Connect</div>
+      >{{ link.title }}
+      </div>
       <a class="hamburger-item hamburger-item-resume" rel="noopener"
            [href]="navBarInfo.resumeUrl" target="_blank" (click)="viewedResume()"
       >Resume</a>
