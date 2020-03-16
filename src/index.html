@@ -12,6 +12,30 @@
 
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyD28GOcdM8uCF_D_d_IfmTIPVhT1Y8WguM",
+      authDomain: "vighnesh153-canvas.firebaseapp.com",
+      databaseURL: "https://vighnesh153-canvas.firebaseio.com",
+      projectId: "vighnesh153-canvas",
+      storageBucket: "vighnesh153-canvas.appspot.com",
+      messagingSenderId: "121131165918",
+      appId: "1:121131165918:web:638e9fe9bcb969504aba4f",
+      measurementId: "G-B8249LVMFV"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </head>
 <body>
   <app-root></app-root>
