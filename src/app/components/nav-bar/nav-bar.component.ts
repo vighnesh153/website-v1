@@ -11,6 +11,8 @@ import {
   onClick
 } from './nav-bar.component.util';
 
+import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -35,7 +37,7 @@ export class NavBarComponent {
     onClick(event, this);
   }
 
-  constructor() {
+  constructor(private googleAnalyticsService: GoogleAnalyticsService) {
   }
 
   onClickHamburger(): void {
@@ -45,5 +47,15 @@ export class NavBarComponent {
   // Needed for smaller devices
   closeHamburgerMenu() {
     this.hamburgerItemsInfo.isHidden = true;
+  }
+
+  viewedResume() {
+    this.googleAnalyticsService
+      .eventEmitter(
+        'viewed_resume',
+        'resume',
+        'view',
+        1
+      );
   }
 }

@@ -9,7 +9,7 @@
           </p>
         </div>
         <a [href]="project.link" class="visit" target="_blank"
-           rel="nofollow">Visit</a>
+           rel="nofollow" (click)="viewProject(project.title)">Visit</a>
       </div>
     </li>
   </ul>

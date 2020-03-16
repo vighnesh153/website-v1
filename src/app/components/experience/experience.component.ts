@@ -8,6 +8,7 @@ import { take } from 'rxjs/operators';
 import { environment } from '@vighnesh153-environments/environment';
 
 import { WorkExperience } from '@vighnesh153-shared/models/Work/WorkExperience';
+import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
 
 @Component({
   selector: 'app-experience',
@@ -19,8 +20,16 @@ export class ExperienceComponent implements OnInit {
   isLoading = true;
   resultFound = false;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private googleAnalyticsService: GoogleAnalyticsService) {
     this.fetchWorkExperience();
+    this.googleAnalyticsService
+      .eventEmitter(
+        'visit_experience',
+        'experience_tab',
+        'visit',
+        1
+      );
   }
 
   fetchWorkExperience() {
