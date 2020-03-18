@@ -38,11 +38,13 @@ a {
   cursor: pointer;
   fill: none;
 
+  outline: none;
+  // Remove the weird box around the LOGO on focus.
+  // Doesn't look good and is not that important in terms of
+  // web accessibility at least for LOGOs.
+
   &:hover {
     fill: rgba($color1, 0.2);
-  }
-  &:focus {
-    outline-color: $color1;
   }
 }
 
