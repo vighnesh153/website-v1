@@ -13,13 +13,25 @@ import {
 
 import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
 
+interface NavBarLinks {
+  routerLink: string;
+  title: string;
+}
+
+interface NavBarInfo {
+  displayNavBar: boolean;
+  top: string;
+  resumeUrl: string;
+  links: NavBarLinks[];
+}
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
-  navBarInfo = {
+  navBarInfo: NavBarInfo = {
     displayNavBar: true,
     top: '0px',
     resumeUrl: environment.personal.resumeUrl,
