@@ -3,11 +3,13 @@ header {
   position: relative;
 }
 
-.main {
+main {
   min-height: 78vh;
   // 10vh nav-bar, 12vh footer. We add min-height so that the footer
   // sticks to the bottom even if the content on the main component
   // is not enough to push the footer to the bottom. If we used position
   // as fixed, then the footer would have been stuck to the bottom
   // even if the main content exceeds the page height.
+
+  display: block;
 }
