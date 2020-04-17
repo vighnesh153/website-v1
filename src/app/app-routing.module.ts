@@ -6,6 +6,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ConnectComponent } from './components/connect/connect.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectsCanvasComponent } from './components/projects-canvas/projects-canvas.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'experience', component: ExperienceComponent },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'projects/canvas', component: ProjectsCanvasComponent },
   { path: 'connect', component: ConnectComponent },
   { path: 'not-found', component: NotFoundComponent },
   { path: '**', redirectTo: '/not-found', pathMatch: 'full' },

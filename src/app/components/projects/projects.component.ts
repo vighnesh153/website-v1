@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { environment } from '@vighnesh153-environments/environment';
-import { Project } from '@vighnesh153-shared/models/Project';
-import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
+import {environment} from '@vighnesh153-environments/environment';
+import {Project} from '@vighnesh153-shared/models/Project';
+import {GoogleAnalyticsService} from '@vighnesh153-shared/services/google-analytics.service';
 
 @Component({
   selector: 'app-projects',
@@ -13,7 +13,10 @@ export class ProjectsComponent implements OnInit {
   projects: Project[];
 
   constructor(private googleAnalyticsService: GoogleAnalyticsService) {
-    this.projects = environment.personal.projects;
+    // Only choose those projects that are either absolute paths
+    // or have # of items > 0.
+    this.projects = environment.personal.projects
+      .filter(p => p.isLinkAbsolute || p.items.length > 0);
   }
 
   ngOnInit(): void {

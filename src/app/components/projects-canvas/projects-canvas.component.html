@@ -1,6 +1,7 @@
 <div class="container">
   <ul class="projects-list">
-    <li class="projects-list-item" *ngFor="let project of projects">
+    <li class="back-btn" routerLink="/projects">Back</li>
+    <li class="projects-list-item" *ngFor="let project of projectsList">
       <div class="header">
         <div class="about">
           <p class="title">{{ project.title }}</p>
@@ -8,11 +9,7 @@
             {{ project.description }}
           </p>
         </div>
-        <a class="visit" [routerLink]="project.routeLink"
-           *ngIf="project.isLinkAbsolute === false"
-           (click)="viewProject(project.title)">Visit</a>
-        <a [href]="project.routeLink" class="visit" target="_blank"
-           *ngIf="project.isLinkAbsolute"
+        <a [href]="project.link" class="visit" target="_blank"
            rel="nofollow" (click)="viewProject(project.title)">Visit</a>
       </div>
     </li>
