@@ -1,39 +1,19 @@
+import { common } from '@vighnesh153-environments/common';
+
 export const environment = {
   production: true,
-  toastDurationInSeconds: 3,
-  corsAnywherePrefix: 'https://cors-anywhere.herokuapp.com/',
+  toastDurationInSeconds: common.toastDurationInSeconds,
+  corsAnywherePrefix: common.corsAnywherePrefix,
   personal: {
-    email: 'vighnesh.raut13@gmail.com',
-    resumeUrl: 'https://drive.google.com/open?id=1u_8oDHemUAYZdO99AGEYX8iqRrl3lNGO',
-    linkedIn: 'https://www.linkedin.com/in/vighnesh153',
+    email: common.personal.email,
+    resumeUrl: common.personal.resumeUrl,
+    linkedIn: common.personal.linkedIn,
     github: {
       currentRepoInfoUrl: 'https://api.github.com/repos/vighnesh153-canvas/angular-client/branches/master',
-      profile: 'https://github.com/vighnesh153'
+      profile: common.personal.github.profile
     },
     pastExperienceFetch: 'https://firebasestorage.googleapis.com/v0/b/vighnesh153-canvas.appspot.com/o/CMS%2FExperience.json?alt=media&to' +
       'ken=e2fe0e01-1bd5-44e1-a285-13a93995b85e',
-    projects: [
-      {
-        title: 'Fractals',
-        description: 'Fractals are shapes that have fractional dimensions.',
-        link: 'https://vighnesh153-canvas.github.io/fractals'
-      },
-      {
-        title: 'Algorithms Visualizer',
-        description: 'I attempt to visualize some of the algorithms that, may or may not be the most efficient ones, ' +
-          'in terms of time and/or space complexity, but are important and fun to understand how they work.',
-        link: 'https://vighnesh153-canvas.github.io/algorithms-visualizer'
-      },
-      {
-        title: 'Games',
-        description: 'A collection of arcade games that I built in my free time',
-        link: 'https://vighnesh153-canvas.github.io/games'
-      },
-      {
-        title: 'Simulations',
-        description: 'Simulations are approximate imitations of systems or processes',
-        link: 'https://vighnesh153-canvas.github.io/simulations'
-      }
-    ]
+    projects: common.personal.projects
   }
 };
