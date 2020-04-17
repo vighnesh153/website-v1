@@ -1,13 +1,13 @@
 @import "src/assets/themes";
 
 .container {
-  padding-top: 70px;
+  padding: 50px 0 5px;
 }
 
 .projects-list {
   width: 70%;
   max-width: 1000px;
-  margin: 0 auto 50px;
+  margin: auto;
   padding-right: 70px;
 
   border-right: 1px solid $color5;
