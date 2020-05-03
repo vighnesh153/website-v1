@@ -25,6 +25,14 @@ const projects = [
     ]
   },
   {
+    id: 'fun-chat',
+    title: 'Fun Chat',
+    routeLink: 'https://github.com/vighnesh153/fun-chat',
+    description: 'A chatting application using NodeJS and Angular.',
+    isLinkAbsolute: true,
+    items: []
+  },
+  {
     id: 'unity',
     title: 'Unity Projects',
     routeLink: '/projects/unity',
