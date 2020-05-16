@@ -1,5 +1,14 @@
 const projects = [
   {
+    id: 'programming_language',
+    title: 'SPL (Simple Programming language)',
+    routeLink: 'https://github.com/vighnesh153/spl',
+    isLinkAbsolute: true,
+    description: 'A small and simple programming language to ' +
+      'help people start their programming journey.',
+    items: []
+  },
+  {
     id: 'canvas',
     title: 'Canvas API',
     routeLink: '/projects/canvas',
