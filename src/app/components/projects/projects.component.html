@@ -1,20 +1,30 @@
 <div class="container">
-  <ul class="projects-list">
-    <li class="projects-list-item" *ngFor="let project of projects">
-      <div class="header">
-        <div class="about">
-          <p class="title">{{ project.title }}</p>
-          <p class="description">
-            {{ project.description }}
-          </p>
+  <div class="loader" *ngIf="isLoading">
+    <app-loader></app-loader>
+  </div>
+
+  <div class="error" *ngIf="!isLoading && !resultFound">
+    <p>Some error occurred! Please try again later..</p>
+  </div>
+
+  <div class="projects-container">
+    <ul class="projects-list" *ngIf="resultFound">
+      <li class="projects-list-item" *ngFor="let project of projects">
+        <div class="header">
+          <div class="about">
+            <p class="title">{{ project.title }}</p>
+            <p class="description">
+              {{ project.description }}
+            </p>
+          </div>
+          <a class="visit" [routerLink]="project.routeLink"
+             *ngIf="project.isLinkAbsolute === false"
+             (click)="viewProject(project.title)">Visit</a>
+          <a [href]="project.routeLink" class="visit" target="_blank"
+             *ngIf="project.isLinkAbsolute"
+             rel="nofollow" (click)="viewProject(project.title)">Visit</a>
         </div>
-        <a class="visit" [routerLink]="project.routeLink"
-           *ngIf="project.isLinkAbsolute === false"
-           (click)="viewProject(project.title)">Visit</a>
-        <a [href]="project.routeLink" class="visit" target="_blank"
-           *ngIf="project.isLinkAbsolute"
-           rel="nofollow" (click)="viewProject(project.title)">Visit</a>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
+  </div>
 </div>

@@ -9,6 +9,7 @@ import { environment } from '@vighnesh153-environments/environment';
 
 import { WorkExperience } from '@vighnesh153-shared/models/Work/WorkExperience';
 import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
+import { JobDescription } from '@vighnesh153-shared/models/Work/JobDescription';
 
 @Component({
   selector: 'app-experience',
@@ -34,14 +35,13 @@ export class ExperienceComponent implements OnInit {
 
   fetchWorkExperience() {
     if (environment.production) {
-      const fetchUrl = environment.corsAnywherePrefix +
-        environment.personal.pastExperienceFetch;
+      const fetchUrl = environment.personal.pastExperienceFetch;
 
       this.http.get(fetchUrl)
         .pipe(take(1))
         .subscribe({
-          next: (data: WorkExperience) => {
-            this.workExperience = data;
+          next: (data: { content: JobDescription[] }) => {
+            this.workExperience = { jobs: data.content };
             this.resultFound = true;
           },
           complete: () => {

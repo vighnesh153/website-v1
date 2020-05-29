@@ -1,7 +1,7 @@
 import { ProjectItem } from '@vighnesh153-shared/models/ProjectItem';
 
 export interface Project {
-  id: string;
+  clientId: string;
   title: string;
   description: string;
   routeLink: string;

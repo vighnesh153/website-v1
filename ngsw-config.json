@@ -48,11 +48,12 @@
     {
       "name": "CMS",
       "urls": [
-        "https://cors-anywhere.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/vighnesh153-canvas.appspot.com/o/CMS%2FExperience.json?alt=media&token=e2fe0e01-1bd5-44e1-a285-13a93995b85e"
+        "https://canvas-admin-portal.herokuapp.com/experience/get",
+        "https://canvas-admin-portal.herokuapp.com/projects/get"
       ],
       "cacheConfig": {
         "maxSize": 3,
-        "maxAge": "6h",
+        "maxAge": "1d",
         "timeout": "10s",
         "strategy": "freshness"
       }
@@ -66,7 +67,7 @@
       ],
       "cacheConfig": {
         "maxSize": 10,
-        "maxAge": "6h",
+        "maxAge": "1d",
         "timeout": "10s",
         "strategy": "freshness"
       }

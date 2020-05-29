@@ -17,7 +17,7 @@ export const environment = {
       profile: common.personal.github.profile
     },
     pastExperienceFetch: '',
-    projects: common.personal.projects
+    projectsFetch: common.personal.projectsFetch
   }
 };
 
