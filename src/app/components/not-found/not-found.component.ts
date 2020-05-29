@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from '@vighnesh153-environments/environment';
 
 @Component({
   selector: 'app-not-found',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
+    const key = router.url;
+    if (environment.redirects.hasOwnProperty(key)) {
+      window.location.replace(environment.redirects[key]);
+    }
+  }
 
   ngOnInit(): void {
   }

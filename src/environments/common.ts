@@ -1,4 +1,7 @@
 export const common = {
+  redirects: {
+    '/admin': 'https://vighnesh153-canvas.github.io/admin-portal-client/'
+  },
   toastDurationInSeconds: 3,
   corsAnywherePrefix: 'https://cors-anywhere.herokuapp.com/',
   personal: {

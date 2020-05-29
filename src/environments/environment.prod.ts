@@ -14,5 +14,6 @@ export const environment = {
     },
     pastExperienceFetch: 'https://canvas-admin-portal.herokuapp.com/experience/get',
     projectsFetch: common.personal.projectsFetch
-  }
+  },
+  redirects: common.redirects
 };

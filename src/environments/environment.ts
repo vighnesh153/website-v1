@@ -18,7 +18,8 @@ export const environment = {
     },
     pastExperienceFetch: '',
     projectsFetch: common.personal.projectsFetch
-  }
+  },
+  redirects: common.redirects
 };
 
 /*

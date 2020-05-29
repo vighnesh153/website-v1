@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'projects/canvas', component: ProjectsCanvasComponent },
   { path: 'connect', component: ConnectComponent },
   { path: 'not-found', component: NotFoundComponent },
-  { path: '**', redirectTo: '/not-found', pathMatch: 'full' },
+  { path: '**', component: NotFoundComponent },   // for handling redirects
 ];
 
 @NgModule({

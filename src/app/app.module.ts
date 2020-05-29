@@ -32,7 +32,7 @@ import { ProjectsCanvasComponent } from './components/projects-canvas/projects-c
     FooterComponent,
     ToastMessagesComponent,
     ProjectsComponent,
-    ProjectsCanvasComponent
+    ProjectsCanvasComponent,
   ],
   imports: [
     BrowserModule,
