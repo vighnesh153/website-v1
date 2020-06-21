@@ -2,14 +2,12 @@ import {
   Component,
   OnInit
 } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { take } from 'rxjs/operators';
 
 import { environment } from '@vighnesh153-environments/environment';
 
 import { WorkExperience } from '@vighnesh153-shared/models/Work/WorkExperience';
 import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
-import { JobDescription } from '@vighnesh153-shared/models/Work/JobDescription';
+import { CmsFetchService } from "@vighnesh153-shared/services/cms-fetch.service";
 
 @Component({
   selector: 'app-experience',
@@ -21,7 +19,7 @@ export class ExperienceComponent implements OnInit {
   isLoading = true;
   resultFound = false;
 
-  constructor(private http: HttpClient,
+  constructor(private cmsFetch: CmsFetchService,
               private googleAnalyticsService: GoogleAnalyticsService) {
     this.fetchWorkExperience();
     this.googleAnalyticsService
@@ -35,20 +33,15 @@ export class ExperienceComponent implements OnInit {
 
   fetchWorkExperience() {
     if (environment.production) {
-      const fetchUrl = environment.personal.pastExperienceFetch;
-
-      this.http.get(fetchUrl)
-        .pipe(take(1))
-        .subscribe({
-          next: (data: { content: JobDescription[] }) => {
-            this.workExperience = { jobs: data.content };
-            this.resultFound = true;
-          },
-          complete: () => {
-            this.isLoading = false;
-          }
+      this.cmsFetch.experience()
+        .then(experience => {
+          this.workExperience = { jobs: experience };
+          this.resultFound = true;
+          this.isLoading = false;
+        })
+        .catch(e => {
+          this.isLoading = false;
         });
-
     } else {
       import('./development-experience')
         .then(module => {

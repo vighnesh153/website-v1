@@ -3,11 +3,9 @@ import {
   OnInit
 } from '@angular/core';
 import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
-import { HttpClient } from '@angular/common/http';
 
 import { ProjectItem } from '@vighnesh153-shared/models/ProjectItem';
-import { environment } from '@vighnesh153-environments/environment';
-import { Project } from '@vighnesh153-shared/models/Project';
+import { CmsFetchService } from "@vighnesh153-shared/services/cms-fetch.service";
 
 @Component({
   selector: 'app-projects-canvas',
@@ -22,22 +20,21 @@ export class ProjectsCanvasComponent implements OnInit {
   isLoading = true;
   resultFound = false;
 
-  constructor(private http: HttpClient,
+  constructor(private cmsFetch: CmsFetchService,
               private googleAnalyticsService: GoogleAnalyticsService) {
   }
 
   ngOnInit(): void {
-    this.http.get(environment.personal.projectsFetch)
-      .subscribe({
-        next: (response: { content: Project[] }) => {
-          const projects = response.content
-            .find(p => p.clientId === 'canvas');
-          this.projectsList = projects.items;
+    this.cmsFetch.projects()
+      .then(projects => {
+          const canvasProjects = projects.find(p => p.clientId === 'canvas');
+          this.projectsList = canvasProjects.items;
           this.resultFound = true;
-        },
-        complete: () => {
           this.isLoading = false;
         }
+      )
+      .catch(e => {
+        this.isLoading = false;
       });
   }
 

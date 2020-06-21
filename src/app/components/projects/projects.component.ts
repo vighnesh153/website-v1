@@ -1,9 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import {environment} from '@vighnesh153-environments/environment';
-import {Project} from '@vighnesh153-shared/models/Project';
-import {GoogleAnalyticsService} from '@vighnesh153-shared/services/google-analytics.service';
-import { HttpClient } from '@angular/common/http';
+import { Project } from '@vighnesh153-shared/models/Project';
+import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
+import { CmsFetchService } from "@vighnesh153-shared/services/cms-fetch.service";
 
 @Component({
   selector: 'app-projects',
@@ -15,15 +14,14 @@ export class ProjectsComponent implements OnInit {
   isLoading = true;
   resultFound = false;
 
-  constructor(private http: HttpClient,
+  constructor(private cmsFetch: CmsFetchService,
               private googleAnalyticsService: GoogleAnalyticsService) {
   }
 
   ngOnInit(): void {
-    this.http.get(environment.personal.projectsFetch)
-      .subscribe({
-        next: (response: { content: Project[] }) => {
-          this.projects = response.content;
+    this.cmsFetch.projects()
+      .then(projects => {
+          this.projects = projects;
 
           // Only choose those projects that are either absolute paths
           // or have # of items > 0.
@@ -31,10 +29,11 @@ export class ProjectsComponent implements OnInit {
             .filter(p => p.isLinkAbsolute || p.items.length > 0);
 
           this.resultFound = true;
-        },
-        complete: () => {
           this.isLoading = false;
         }
+      )
+      .catch(e => {
+        this.isLoading = false;
       });
   }
 

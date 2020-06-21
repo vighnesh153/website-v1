@@ -11,9 +11,8 @@ export const environment = {
     github: {
       currentRepoInfoUrl: 'https://api.github.com/repos/vighnesh153-canvas/angular-client/branches/master',
       profile: common.personal.github.profile
-    },
-    pastExperienceFetch: 'https://canvas-admin-portal.herokuapp.com/experience/get',
-    projectsFetch: common.personal.projectsFetch
+    }
   },
-  redirects: common.redirects
+  redirects: common.redirects,
+  ...common.useDirectly
 };

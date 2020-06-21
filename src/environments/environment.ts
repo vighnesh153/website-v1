@@ -15,11 +15,10 @@ export const environment = {
     github: {
       currentRepoInfoUrl: '',
       profile: common.personal.github.profile
-    },
-    pastExperienceFetch: '',
-    projectsFetch: common.personal.projectsFetch
+    }
   },
-  redirects: common.redirects
+  redirects: common.redirects,
+  ...common.useDirectly
 };
 
 /*

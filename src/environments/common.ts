@@ -10,7 +10,10 @@ export const common = {
     linkedIn: 'https://www.linkedin.com/in/vighnesh153',
     github: {
       profile: 'https://github.com/vighnesh153'
-    },
-    projectsFetch: 'https://canvas-admin-portal.herokuapp.com/projects/get'
+    }
+  },
+  useDirectly: {
+    latestGistCommitIdFetch: 'https://api.github.com/gists/93e4b036228e2c50607c8d689b946327/commits',
+    gistDataRoot: 'https://gist.githubusercontent.com/vighnesh153/93e4b036228e2c50607c8d689b946327/raw/'
   }
 };
