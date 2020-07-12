@@ -6,7 +6,7 @@ export const common = {
   corsAnywherePrefix: 'https://cors-anywhere.herokuapp.com/',
   personal: {
     email: 'vighnesh.raut13@gmail.com',
-    resumeUrl: 'https://drive.google.com/open?id=1u_8oDHemUAYZdO99AGEYX8iqRrl3lNGO',
+    resumeUrl: 'http://bit.ly/vighnesh153-resume',
     linkedIn: 'https://www.linkedin.com/in/vighnesh153',
     github: {
       profile: 'https://github.com/vighnesh153'
