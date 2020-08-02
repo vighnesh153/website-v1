@@ -19,7 +19,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ToastMessagesComponent } from './components/toast-messages/toast-messages.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { ProjectsCanvasComponent } from './components/projects-canvas/projects-canvas.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,6 @@ import { ProjectsCanvasComponent } from './components/projects-canvas/projects-c
     FooterComponent,
     ToastMessagesComponent,
     ProjectsComponent,
-    ProjectsCanvasComponent,
   ],
   imports: [
     BrowserModule,
