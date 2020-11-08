@@ -22,6 +22,7 @@ interface NavBarInfo {
   displayNavBar: boolean;
   top: string;
   resumeUrl: string;
+  blogUrl: string;
   links: NavBarLinks[];
 }
 
@@ -35,6 +36,7 @@ export class NavBarComponent {
     displayNavBar: true,
     top: '0px',
     resumeUrl: environment.personal.resumeUrl,
+    blogUrl: environment.personal.blogUrl,
     links: [
       {
         title: 'Experience',

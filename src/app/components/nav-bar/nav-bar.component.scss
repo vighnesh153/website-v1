@@ -6,7 +6,6 @@ nav {
   position: fixed;
 
   background-color: $color2;
-  color: $majorTextColor;
 
   z-index: 1;
   // Given because we are using a fixed element. If a relative
@@ -54,7 +53,7 @@ a {
 }
 
 .hamburger-items {
-  width: 40%;
+  width: 50%;
   max-width: 500px;
   display: flex;
 
@@ -72,6 +71,8 @@ a {
 
   display: flex;
   align-items: center;
+
+  color: $majorTextColor;
 }
 
 .hamburger-item:focus,

@@ -12,6 +12,9 @@
       class="hamburger-items"
       #hamburgerItems
     >
+      <a class="hamburger-item" rel="noreferrer nofollow noopener"
+         [href]="navBarInfo.blogUrl" target="_blank" (click)="viewedResume()"
+      >Blog</a>
       <div *ngFor="let link of navBarInfo.links"
            class="hamburger-item"
            [routerLink]="link.routerLink"
@@ -20,7 +23,7 @@
            [routerLinkActiveOptions]="{ exact: true }"
       >{{ link.title }}
       </div>
-      <a class="hamburger-item hamburger-item-resume" rel="noopener"
+      <a class="hamburger-item hamburger-item-resume" rel="noreferrer nofollow noopener"
            [href]="navBarInfo.resumeUrl" target="_blank" (click)="viewedResume()"
       >Resume</a>
     </div>

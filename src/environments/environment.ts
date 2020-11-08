@@ -6,15 +6,11 @@ import { common } from '@vighnesh153-environments/common';
 
 export const environment = {
   production: false,
-  toastDurationInSeconds: common.toastDurationInSeconds,
-  corsAnywherePrefix: common.corsAnywherePrefix,
   personal: {
-    email: common.personal.email,
-    resumeUrl: common.personal.resumeUrl,
-    linkedIn: common.personal.linkedIn,
+    ...common.personal,
     github: {
+      ...common.personal.github,
       currentRepoInfoUrl: '',
-      profile: common.personal.github.profile
     }
   },
   redirects: common.redirects,
