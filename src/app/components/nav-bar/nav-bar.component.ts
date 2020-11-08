@@ -86,4 +86,14 @@ export class NavBarComponent {
         1
       );
   }
+
+  viewedBlog() {
+    this.googleAnalyticsService
+      .eventEmitter(
+        'viewed_blog',
+        'blog',
+        'view',
+        1
+      );
+  }
 }
