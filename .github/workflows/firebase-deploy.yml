@@ -11,14 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
+    - name: Checkout code
+      uses: actions/checkout@master
+
+    - name: Setup NodeJS
+      uses: actions/setup-node@v2
       with:
-        node-version: '10.x'
-    - run: npm install
-    - run: npm i -g @angular/cli
-    - run: ng build --prod
-    - uses: w9jds/firebase-action@master
+        node-version: '12'
+        check-latest: true'
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Globally install Angular CLI
+      run: npm i -g @angular/cli
+
+    - name: Build site for production
+      run: ng build --prod
+
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@master
       with:
         args: deploy --only hosting
       env:

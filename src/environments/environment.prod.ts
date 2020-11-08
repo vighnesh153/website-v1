@@ -9,7 +9,7 @@ export const environment = {
     resumeUrl: common.personal.resumeUrl,
     linkedIn: common.personal.linkedIn,
     github: {
-      currentRepoInfoUrl: 'https://api.github.com/repos/vighnesh153-canvas/angular-client/branches/master',
+      currentRepoInfoUrl: 'https://api.github.com/repos/vighnesh153/website-v1/branches/master',
       profile: common.personal.github.profile
     }
   },
