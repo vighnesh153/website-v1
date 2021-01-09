@@ -7,7 +7,7 @@ import { environment } from '@vighnesh153-environments/environment';
 
 import { WorkExperience } from '@vighnesh153-shared/models/Work/WorkExperience';
 import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
-import { CmsFetchService } from "@vighnesh153-shared/services/cms-fetch.service";
+import { CmsFetchService } from '@vighnesh153-shared/services/cms-fetch.service';
 
 @Component({
   selector: 'app-experience',

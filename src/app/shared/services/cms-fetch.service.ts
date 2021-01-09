@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { environment } from "@vighnesh153-environments/environment";
-import { map, take } from "rxjs/operators";
+import { HttpClient } from '@angular/common/http';
+import { environment } from '@vighnesh153-environments/environment';
+import { map, take } from 'rxjs/operators';
 
-import { Project } from "@vighnesh153-shared/models/Project";
-import { JobDescription } from "@vighnesh153-shared/models/Work/JobDescription";
+import { Project } from '@vighnesh153-shared/models/Project';
+import { JobDescription } from '@vighnesh153-shared/models/Work/JobDescription';
 
 @Injectable({
   providedIn: 'root'

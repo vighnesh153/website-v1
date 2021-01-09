@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Project } from '@vighnesh153-shared/models/Project';
 import { GoogleAnalyticsService } from '@vighnesh153-shared/services/google-analytics.service';
-import { CmsFetchService } from "@vighnesh153-shared/services/cms-fetch.service";
+import { CmsFetchService } from '@vighnesh153-shared/services/cms-fetch.service';
 
 @Component({
   selector: 'app-projects',
