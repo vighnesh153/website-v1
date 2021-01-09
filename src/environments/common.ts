@@ -10,7 +10,7 @@ export const common = {
     '/projects': appsUrl,
   },
   personal: {
-    email: 'vighnesh.raut13@gmail.com',
+    email: 'me@vighnesh153.com',
     resumeUrl: 'http://bit.ly/vighnesh153-resume',
     blogUrl,
     appsUrl,
