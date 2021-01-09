@@ -15,6 +15,9 @@
       <a class="hamburger-item" rel="noreferrer nofollow noopener"
          [href]="navBarInfo.blogUrl" target="_blank" (click)="viewedBlog()"
       >Blog</a>
+      <a class="hamburger-item" rel="noreferrer nofollow noopener"
+         [href]="navBarInfo.appsUrl" target="_blank" (click)="viewedProjects()"
+      >Projects</a>
       <div *ngFor="let link of navBarInfo.links"
            class="hamburger-item"
            [routerLink]="link.routerLink"

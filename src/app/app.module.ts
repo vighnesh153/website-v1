@@ -18,7 +18,6 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { ToastMessagesComponent } from './components/toast-messages/toast-messages.component';
-import { ProjectsComponent } from './components/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { ProjectsComponent } from './components/projects/projects.component';
     NotFoundComponent,
     FooterComponent,
     ToastMessagesComponent,
-    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

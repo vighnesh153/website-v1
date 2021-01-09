@@ -23,6 +23,7 @@ interface NavBarInfo {
   top: string;
   resumeUrl: string;
   blogUrl: string;
+  appsUrl: string;
   links: NavBarLinks[];
 }
 
@@ -37,14 +38,11 @@ export class NavBarComponent {
     top: '0px',
     resumeUrl: environment.personal.resumeUrl,
     blogUrl: environment.personal.blogUrl,
+    appsUrl: environment.personal.appsUrl,
     links: [
       {
         title: 'Experience',
         routerLink: '/experience'
-      },
-      {
-        title: 'Projects',
-        routerLink: '/projects'
       },
       {
         title: 'Connect',
@@ -92,6 +90,16 @@ export class NavBarComponent {
       .eventEmitter(
         'viewed_blog',
         'blog',
+        'view',
+        1
+      );
+  }
+
+  viewedProjects() {
+    this.googleAnalyticsService
+      .eventEmitter(
+        'viewed_apps',
+        'apps',
         'view',
         1
       );

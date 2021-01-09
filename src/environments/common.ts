@@ -1,15 +1,19 @@
-const blogUrl = 'http://blog.vighnesh153.com/';
+const blogUrl = 'https://blog.vighnesh153.com/';
+const appsUrl = 'https://apps.vighnesh153.com/';
 
 export const common = {
   redirects: {
     '/admin': 'https://vighnesh153-canvas.github.io/admin-portal-client/',
     '/stuff-manager': 'https://vighnesh153.github.io/stuff-manager/',
     '/blog': blogUrl,
+    '/apps': appsUrl,
+    '/projects': appsUrl,
   },
   personal: {
     email: 'vighnesh.raut13@gmail.com',
     resumeUrl: 'http://bit.ly/vighnesh153-resume',
     blogUrl,
+    appsUrl,
     linkedIn: 'https://www.linkedin.com/in/vighnesh153',
     github: {
       profile: 'https://github.com/vighnesh153'
